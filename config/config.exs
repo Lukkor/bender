@@ -2,6 +2,17 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
+config :bender, Bender.Robot,
+  adapter: Hedwig.Adapters.Slack,
+  name: "bender",
+  aka: "/",
+  responders: [
+    {Hedwig.Responders.Help, []},
+    {Hedwig.Responders.GreatSuccess, []},
+    {Hedwig.Responders.ShipIt, []}
+  ]
+
+
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
 # file won't be loaded nor affect the parent project. For this reason,

@@ -9,6 +9,7 @@ defmodule Bender do
     children = [
       # Define workers and child supervisors to be supervised
       # worker(Bender.Worker, [arg1, arg2, arg3]),
+      worker(Bender.Robot, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

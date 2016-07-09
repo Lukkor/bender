@@ -14,7 +14,7 @@ defmodule Bender.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger],
+    [applications: [:logger, :hedwig_slack],
      mod: {Bender, []}]
   end
 
@@ -28,6 +28,6 @@ defmodule Bender.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:hedwig_slack, "~> 0.1"}]
   end
 end
