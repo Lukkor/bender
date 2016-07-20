@@ -7,7 +7,8 @@ config :bender, Bender.Robot,
   token: System.get_env("SLACK_API_TOKEN"),
   rooms: ["bender"],
   responders: [
-    {Hedwig.Responders.Help, []},
-    {Hedwig.Responders.GreatSuccess, []},
-    {Hedwig.Responders.ShipIt, []}
+    { Bender.Responders.Hello, [] },
+    { Hedwig.Responders.Help, [] },
+    { Hedwig.Responders.GreatSuccess, [] },
+    { Hedwig.Responders.ShipIt, [] }
   ]

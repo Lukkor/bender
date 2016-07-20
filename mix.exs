@@ -28,6 +28,6 @@ defmodule Bender.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:hedwig_slack, "~> 0.1"}]
+    [{:hedwig_slack, github: "hedwig-im/hedwig_slack"}]
   end
 end
